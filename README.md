@@ -8,22 +8,17 @@ Run these commands from the /customer-matter-management/ dir
 
 # Start PostgreSQL Database
 
-1. sudo service postgresql start
+## MacOS
 
-## Install postgres if needed
+1. brew services start postgresql
+2. psql postgres
 
-### MacOs
+- Confirm PostgreSQL is running
 
-1. brew install postgresql
+## Windows
 
-### Windows
+1. Download the installer from the PostgreSQL official site - https://www.postgresql.org/download/windows/
+2. Run the installer and follow the instructions.
+3. psql postgres
 
-1. Download PostgreSQL - https://www.postgresql.org/download/windows/
-   Click on the "Download the installer" link. You’ll be redirected to a page with installers for Windows. Choose the latest version and download the Windows x86-64 installer.
-
-2. Run the installer and follow the prompts and leave the default values.
-
-- Choose a password for the superuser postgres (this will be your database password).
-- Note the port (default is 5432).
-- Choose the installation directory.
-- Leave the checkboxes for "StackBuilder" unchecked for now (you can use it later to install additional PostgreSQL tools).
+- Confirm PostgreSQL is running
