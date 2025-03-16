@@ -1,0 +1,19 @@
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  password VARCHAR(255) NOT NULL,
+  user_name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS customers (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  phone VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS matters (
+  id SERIAL PRIMARY KEY,
+  customer_id INT REFERENCES customers(id),
+  name VARCHAR(255) NOT NULL,
+  description TEXT
+);
